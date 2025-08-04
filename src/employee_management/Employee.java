@@ -8,8 +8,28 @@ public abstract class Employee {
     private final String name;
 
     public Employee(int employeeId, String name) {
+        dernierId++;
         this.employeeId = employeeId;
         this.name = name;
+    }
+
+    public Employee(String name) {
+        dernierId++;
+        this.employeeId = dernierId;
+        this.name = name;
+    }
+
+    static synchronized int getNouvelId() {
+        dernierId++;
+        return dernierId;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public abstract double calculatePay();
