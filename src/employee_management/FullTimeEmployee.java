@@ -14,7 +14,7 @@ public class FullTimeEmployee extends Employee {
 
     @Override
     public double calculatePay() {
-        return monthlySalary;
+        return( (float) 20/100 * monthlySalary);
     }
 
     @Override
