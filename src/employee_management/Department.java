@@ -21,4 +21,21 @@ public class Department {
         this.departmentName = departmentName;
         this.employees = employees;
     }
+
+    public void afficherDetailsSensibles() {
+        System.out.println("=== Détails RH (Département : " + departmentName + ") ===");
+        for (Employee emp : employees) {
+            System.out.println("Nom: " + emp.getName());
+
+            if (emp instanceof PartTimeEmployee) {
+                PartTimeEmployee empHoraire = (PartTimeEmployee) emp;
+                System.out.println("  - Taux horaire: " + empHoraire.getHourlyRate());
+                System.out.println("  - Revenu estimé: " + empHoraire.calculatePay());
+            }
+            else if (emp instanceof FullTimeEmployee) {
+                FullTimeEmployee empTempsPlein = (FullTimeEmployee) emp;
+                System.out.println("  - Salaire mensuel: " + empTempsPlein.getMonthlySalary());
+            }
+        }
+    }
 }
