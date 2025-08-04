@@ -10,4 +10,9 @@ public abstract class TimeEmployee {
     }
 
     public abstract double calculatePay();
+
+    @Override
+    public String toString() {
+        return "employeeId="+this.employeeId + ", name="+this.name;
+    }
 }

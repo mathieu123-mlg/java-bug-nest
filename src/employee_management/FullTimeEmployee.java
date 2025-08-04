@@ -16,5 +16,13 @@ public class FullTimeEmployee extends TimeEmployee {
     public double calculatePay() {
         return monthlySalary;
     }
+
+    @Override
+    public String toString() {
+        return "FullTimeEmployee{" +
+                super.toString() +
+                ", monthlySalary=" + monthlySalary +
+                '}';
+    }
 }
 
