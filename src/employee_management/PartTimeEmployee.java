@@ -1,6 +1,6 @@
 package employee_management;
 
-public class PartTimeEmployee extends TimeEmployee {
+public class PartTimeEmployee extends Employee {
     private double hoursWorked;
     private double hourlyRate;
 
