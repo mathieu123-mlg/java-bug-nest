@@ -13,6 +13,10 @@ public class FullTimeEmployee extends Employee {
         this.monthlySalary = monthlySalary;
     }
 
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+
     public void setMonthlySalary(double monthlySalary) {
         this.monthlySalary = monthlySalary;
     }
