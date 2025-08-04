@@ -3,8 +3,9 @@ package employee_management;
 import java.util.Objects;
 
 public abstract class Employee {
-    private int employeeId;
-    private String name;
+    private static int dernierId = 0;
+    private final int employeeId;
+    private final String name;
 
     public Employee(int employeeId, String name) {
         this.employeeId = employeeId;
